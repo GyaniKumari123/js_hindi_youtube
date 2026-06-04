@@ -35,6 +35,8 @@ const user={
 // }
 
 // implicit return arrow function
+// parenthesis mein khud return hoga
+//  but { } mein return keyword likhna padega
 // const addtwo=(num1,num2)=>  (num1+num2)
 
 const return_object=()=>({username:"Hitesh Choudhry"})
