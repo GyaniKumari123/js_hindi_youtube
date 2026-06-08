@@ -33,3 +33,41 @@ buttons.forEach((button)=>{
 
 
 ```
+## project 2
+```const form=document.querySelector("form");
+// this usecase will give you wrong answer
+// const height=parseInt(document.querySelector("#height").value)
+form.addEventListener('submit',function(e){
+ e.preventDefault();
+ const height=parseInt(document.querySelector("#height").value);
+ const weight=parseInt(document.querySelector("#weight").value);
+ const results=document.querySelector("#results")
+ if(height==='' ||height<0 || isNaN(height)){
+   results.innerHTML="please give a valid height"
+ }
+
+ else if(weight==='' ||weight<0 || isNaN(weight)){
+  weight.innerHTML="please give a valid weight"
+}
+else{
+  const bmi=(weight/((height*height)/10000)).toFixed(2);
+  // sshow result
+  results.innerHTML=`<span>${bmi}</span>`
+  
+}
+
+})
+```
+## project 3
+``` javascript
+const clock=document.getElementById('clock');
+
+setInterval(function(){
+  let date=new Date();
+  // console.log(date.toLocaleString())
+  // const textnode=document.createTextNode(date.toLocaleString());
+  // clock.appendChild(textnode);
+  clock.innerHTML=date.toLocaleString();
+  
+},1000)
+```
