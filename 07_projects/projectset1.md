@@ -71,3 +71,60 @@ setInterval(function(){
   
 },1000)
 ```
+## project 5
+```javascript
+const insert = document.getElementById('insert');
+window.addEventListener('keydown', (e) => {
+  insert.innerHTML = `
+  <div class='color'>
+  <table>
+  <tr>
+    <th>Key</th>
+    <th>KeyCode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  
+</table>
+
+
+
+  
+  </div>
+  `;
+});
+
+```
+## project 6 Unlimited colors
+``` javascript
+// generate a random color
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+let intervalID;
+const startChangingColor=function(){
+  if(!intervalID){
+    intervalId=setInterval(changeBackground,1000);
+  }
+   
+function changeBackground(){
+  document.body.style.backgroundColor=randomColor();
+}}
+
+const stopChangingColor=function(){
+clearInterval(intervalId);
+intervalId=null;
+}
+document.getElementById("start").addEventListener('click',startChangingColor);
+document.getElementById("stop").addEventListener('click',stopChangingColor);
+
+```

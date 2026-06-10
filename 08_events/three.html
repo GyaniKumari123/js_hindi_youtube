@@ -11,14 +11,33 @@
     <button id="start">start</button>
 </body>
 <script>
+// setInterval runs functions in every given interval
+// clearInterval is used to remove ffunction call of setinterval
+  // setInterval(function(){
+  //  console.log("Gyani",Date.now())
+  // },1000)
 
-  setInterval(function(){
-   console.log("Gyani",Date.now())
-  },1000)
-
-  const sayDate=function(){
-    console.log("Gyani",Date.now());
+  // const sayDate=function(){
+  //   console.log("Gyani",Date.now());
+  // }
+  // const intervalId=setInterval(sayDate,1000);
+  // clearInterval(intervalId);
+  // project
+  // start button start printing name
+  // stop button stop printing name
+  const printName=function(){
+    console.log("Gyani Kumari Yadav",Date.now());
   }
-  setInterval(sayDate,1000);
+  // start button start printing name
+  
+  document.getElementById("start").addEventListener('click',function(){
+    const set=setInterval(printName,1000);
+  })
+   const set=setInterval(printName,1000);
+// stop button stop printing name
+document.getElementById("stop").addEventListener('click',function(){
+  clearInterval(set);
+})
+
 </script>
 </html>
